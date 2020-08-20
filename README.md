@@ -1,2 +1,2 @@
 # AluraRecipe
-Um web site com opções de receitas de alimentos, cada receita possui ingredientes, modo de preparo e outras informações. Este projeto é resultado de meus estudos em um dos cursos da Alura, mais especificamente (introdução ao Django: Modelo, rotas e views).
+A website with options for food recipes, each recipe has ingredients, method of preparation and other information. This project is the result of my studies in one of Alura's courses, more specifically (introduction to Django: Model, routes and views).
