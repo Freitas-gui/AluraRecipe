@@ -1,16 +1,15 @@
 from django.shortcuts import render
+from .models import Recipe
 
 def home(request):
-    data = {}
-    name_of_recipes = {
-        1:'bean',
-        2:'rice',
-        3:'meat'
-    }
+    recipes = Recipe.objects.all()
+    return render(request,'home.html',{'recipes':recipes})
 
+def show_recipe(request, id_recipe):
+    context = Recipe.objects.filter(id=id_recipe)
+    return render(request,'recipe.html',{'context':context})
 
-    return render(request,'home.html',{'name_of_recipes':name_of_recipes})
-
-def recipes(request):
-    return render(request,'recipes.html')
+def show_recipe_all(request):
+    context = Recipe.objects.all()
+    return render(request,'recipe.html',{'context':context})
 
