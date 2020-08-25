@@ -1,9 +1,10 @@
 from django.shortcuts import render
 from .models import Recipe
+from django.views.generic.list import ListView
 
-def home(request):
-    recipes = Recipe.objects.all()
-    return render(request,'home.html',{'recipes':recipes})
+class home(ListView):
+    model = Recipe
+    template_name = "home.html"
 
 def show_recipe(request, id_recipe):
     context = Recipe.objects.filter(id=id_recipe)
