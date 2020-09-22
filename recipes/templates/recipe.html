@@ -16,11 +16,14 @@
 
 {% block content %}
 
+   <div class="mb-100">{% include 'partials/menu.html' %}</div>
+
     <!-- Preloader -->
     <div id="preloader">
         <i class="circle-preloader"></i>
         <img src="{% static 'img/core-img/hamburger.png'%}" alt="">
     </div>
+
 
     <!-- Search Wrapper -->
     <div class="search-wrapper">
@@ -39,9 +42,6 @@
         </div>
     </div>
 
-       {% include 'partials/menu.html' %}
-
-
         <!-- Receipe Post Search -->
         <div class="receipe-post-search mb-80">
             <div class="container">
@@ -49,9 +49,10 @@
                     <div class="row">
                         <div class="col-12 col-lg-5">
                             <select name="select1" id="select1">
-                                <option value="1">Comida típica brasileira</option>
-                                <option value="1">Massas</option>
-                                <option value="1">Veganas</option>
+                                <option value="1">Typical Brazilian food</option>
+                                <option value="1">Pasta</option>
+                                <option value="1">Vegan</option>
+                                <option value="1">Candy</option>
                             </select>
                         </div>
                         <div class="col-12 col-lg-2 text-right">
@@ -72,42 +73,46 @@
                 </div>
             </div>
         </div>
-        {% for value in context %}
-            <!-- Receipe Content Area -->
-            <div class="receipe-content-area">
-                <div class="container">
+        <div class="container">
+            {% for value in context %}
+                <!-- Receipe Content Area -->
+                <div class="receipe-content-area my-5">
+                    <div class="container">
 
-                    <div class="row">
-                        <div class="col-12 col-md-8">
-                            <div class="receipe-headline my-5">
-                                <span>{{ value.date_of_created }}</span>
-                                <h2>{{ value.name }}</h2>
-                                <div class="receipe-duration">
-                                    <h6>Time of preparation: {{ value.time_preparation }}</h6>
-                                    <h6>Yield: {{ value.Yield }}</h6>
-                                    <h6>Category: {{ value.category }}</h6>
+                        <div class="row">
+
+                                <div class="receipe-headline mr-auto ">
+                                    <span>{{ value.date_of_created }}</span>
+                                    <h2>{{ value.name }}</h2>
+                                    <div class="receipe-duration">
+                                        <h6>Time of preparation: {{ value.time_preparation }}</h6>
+                                        <h6>Category: {{ value.category }}</h6>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
 
-                    <div class="row">
-                        <div class="col-12 col-lg-8">
-                            <!-- Single Preparation Step -->
-                            <div class="single-preparation-step d-flex">
-                                <p>{{ value.preparation_mode }}</p>
-                            </div>
-                        </div>
 
-                        <!-- Ingredients -->
-                        <div class="col-12 col-lg-4">
-                            <div class="ingredients">
-                                <h4>Ingredients</h4>
+
+
+                                <!-- Single Preparation Step -->
+                                <div class="single-preparation-step d-flex">
+                                    <p>{{ value.preparation_mode }}</p>
+                                </div>
+
+
+                            <!-- Ingredients -->
+                            <div class="col-12 col-lg-4">
                                 <div class="ingredients">
-                                    <p>{{ value.ingredients }} </p>
+                                    <h4>Ingredients</h4>
+                                    <div class="ingredients">
+                                        <p>{{ value.ingredients }} </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+
                     <!-- Ingredientes -->
             {% endfor %}
                 {% include 'partials/footer.html' %}

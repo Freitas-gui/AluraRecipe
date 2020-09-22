@@ -414,10 +414,13 @@ textarea:focus {
 .header-area {
   position: relative;
   z-index: 100;
-  width: 100%; }
+  width: 100%;
+  height: 80px;
+}
+
   .header-area .top-header-area {
     width: 100%;
-    height: 50px;
+    height: 30px;
     background-color: #ffffff;
     border-bottom: 1px solid #dddee9; }
     @media only screen and (max-width: 767px) {
@@ -672,7 +675,7 @@ textarea:focus {
 .best-receipe-area {
   position: relative;
   z-index: 1;
-  padding-bottom: 50px; }
+  padding-bottom: 0px; }
 
 .single-best-receipe-area {
   position: relative;
@@ -993,7 +996,7 @@ textarea:focus {
 
 .receipe-headline span {
   font-size: 14px;
-  display: block;
+  display: inline-block;
   color: #a4a4a4;
   margin-bottom: 0; }
 .receipe-headline h2 {
@@ -1031,6 +1034,10 @@ textarea:focus {
     max-width: 60px;
     width: 60px;
     margin-bottom: 0; }
+
+.ingredients{
+  display: inline-block;
+}
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .ingredients {
