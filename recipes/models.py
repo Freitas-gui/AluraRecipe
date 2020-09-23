@@ -6,7 +6,7 @@ class Recipe(models.Model):
     name = models.CharField(max_length=100)
     ingredients = models.CharField(max_length=300)
     date_of_created = models.DateField(default=datetime.now(), blank=True)
-    time_preparation = models.TimeField()
+    time_preparation = models.DurationField()
 
     WITHOUT = 'WI'
     PASTA = 'PA'
