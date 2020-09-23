@@ -7,7 +7,7 @@ class Recipe(models.Model):
     ingredients = models.CharField(max_length=300)
     date_of_created = models.DateField(default=datetime.now(), blank=True)
     time_preparation = models.DurationField()
-
+    mode_preparation = models.CharField(max_length=300)
     WITHOUT = 'WI'
     PASTA = 'PA'
     VEGAN = 'VE'

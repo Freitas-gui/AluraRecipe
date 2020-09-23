@@ -77,11 +77,11 @@
             {% for value in context %}
                 <!-- Receipe Content Area -->
                 <div class="receipe-content-area my-5">
-                    <div class="container">
+                    <div class="container receipes">
 
-                        <div class="row">
+                        <div class="row mr-auto rounded ">
 
-                                <div class="receipe-headline mr-auto ">
+                                <div class="receipe-headline  ">
                                     <span>{{ value.date_of_created }}</span>
                                     <h2>{{ value.name }}</h2>
                                     <div class="receipe-duration">
@@ -91,16 +91,17 @@
                                 </div>
 
 
-
-
-                                <!-- Single Preparation Step -->
-                                <div class="single-preparation-step d-flex">
-                                    <p>{{ value.preparation_mode }}</p>
+                            <div class="col-12 col-lg-4 m-auto single-preparation-step d-flex ">
+                                <div class="ingredients">
+                                    <h4>Preparation mode</h4>
+                                    <div class="ingredients">
+                                        <p>{{ value.mode_preparation }}</p>
+                                    </div>
                                 </div>
-
+                            </div>
 
                             <!-- Ingredients -->
-                            <div class="col-12 col-lg-4">
+                            <div class="col-">
                                 <div class="ingredients">
                                     <h4>Ingredients</h4>
                                     <div class="ingredients">

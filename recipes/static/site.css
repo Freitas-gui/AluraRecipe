@@ -29,7 +29,7 @@ h6 {
   font-weight: 600; }
 
 p {
-  color: #9b9b9b;
+  color: #000000;
   font-size: 14px;
   line-height: 2;
   font-weight: 400; }
@@ -1023,6 +1023,7 @@ textarea:focus {
   padding: 0 3px; }
 
 .single-preparation-step {
+  display: inline-block;
   position: relative;
   z-index: 1;
   margin-bottom: 50px; }
@@ -1037,6 +1038,13 @@ textarea:focus {
 
 .ingredients{
   display: inline-block;
+  width: 20em;
+}
+
+.receipes{
+  background: #eeeeee;
+  border-radius: 10px;
+  padding: 20px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
