@@ -12,5 +12,5 @@ def show_recipe(request, id_recipe):
 
 def show_recipe_all(request):
     context = Recipe.objects.all()
-    return render(request,'recipe.html',{'context':context})
+    return render(request, 'recipe.html', {'context':context})
 
